@@ -1,6 +1,8 @@
+require('dotenv').config();
+
 module.exports = {
   line: {
-    accessToken: '__PUT_YOUR_ACCESS_TOKEN_HERE__',
-    channelSecret: '__PUT_YOUR_CHANNEL_SECRET_HERE__'
-  }
+    accessToken: process.env.ACCESS_TOKEN,
+    channelSecret: process.env.CHANNEL_SECRET,
+  },
 };
