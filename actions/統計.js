@@ -29,5 +29,5 @@ module.exports = async context => {
         )} 點的`
     )
     .join('\n');
-  context.replyText(result);
+  await context.replyText(result);
 };
