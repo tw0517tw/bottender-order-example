@@ -9,6 +9,11 @@ const bot = new LineBot({
   channelSecret: config.channelSecret,
 });
 
+bot.setInitialState({
+  開團中: false,
+  開團人: '',
+  訂單: [],
+});
 
 bot.onEvent(handler);
 
