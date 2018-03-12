@@ -29,5 +29,7 @@ module.exports = async context => {
         )} 點的`
     )
     .join('\n');
-  await context.replyText(result);
+
+  // 避免沒有訂單傳送空字串出現錯誤
+  await context.replyText(result || '沒有訂單QQ');
 };

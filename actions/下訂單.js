@@ -16,6 +16,7 @@ module.exports = async (context, match) => {
       ...context.state,
       訂單: context.state.訂單.concat({
         name: displayName,
+        userId,
         order,
       }),
     });
