@@ -9,7 +9,7 @@ const 下訂單 = require('./actions/下訂單');
 // 沒開團的狀態下，輸入「開團」可以開團
 const 未開團handler = new LineHandler().onText('開團', 開團).build();
 
-// 已開團的狀態下除了三種指令都視為下訂單
+// 已開團的狀態下，有四種指令可以用
 const 開團中handler = new LineHandler()
   .onText('截止', 截止)
   .onText('統計', 統計)
