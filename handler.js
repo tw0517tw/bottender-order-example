@@ -17,7 +17,7 @@ const 開團中handler = new LineHandler()
   .onText(/^我也?要(.*)/, 下訂單)
   .build();
 
-// 按照 state 決定要現在的狀態要用哪個子 handler
+// 按照 state 決定現在的狀態要用哪個子 handler
 module.exports = new LineHandler()
   .on(context => !context.state.開團中, 未開團handler)
   .on(context => context.state.開團中, 開團中handler)

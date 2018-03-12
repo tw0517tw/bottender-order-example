@@ -1,5 +1,7 @@
 module.exports = async context => {
   const { displayName } = context.session.user;
+
+  // 設定為開團初始 state
   context.setState({
     開團中: true,
     開團人: context.session.user,

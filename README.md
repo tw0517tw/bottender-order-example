@@ -1,52 +1,105 @@
-This project was bootstrapped with
-[Bottender](https://github.com/Yoctol/bottender) init script.
+# bottender-order-example
 
-## Sending Feedback
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/tw0517tw/bottender-order-example&env=ACCESS_TOKEN&env=CHANNEL_SECRET)
 
-Always feel free to open issue to
-[Bottender](https://github.com/Yoctol/bottender/issues).
+以 [Bottender](https://github.com/Yoctol/bottender) 實作的團購揪團 LINE Bot 範例，[還沒寫好的](https://blog.yoctol.com)文章的範例程式碼。
 
-## Folder Structure
+## 支援的指令
 
-After creation, your project should look like this:
+### 開團
+
+開始一個團體訂單
 
 ```
-my-bot/
-  .gitignore
+開團
+```
+
+### 截止
+
+結束一個團體訂單
+
+```
+截止
+```
+
+### 統計
+
+輸出目前訂單內容
+
+```
+統計
+```
+
+### 下訂單
+
+點自己想要的內容，一人限點一次
+
+```
+我要<訂單內容>
+我也要<訂單內容>
+```
+
+範例：
+
+```
+我要紅茶拿鐵
+我也要鮮奶茶
+```
+
+### 取消訂單
+
+取消自己的訂單
+
+```
+取消
+```
+
+## 目錄結構
+
+整個目錄結構大概是這樣：
+
+```
+bottender-kamigo-example/
+  actions/
   node_modules/
-  bottender.config.js
   index.js
+  bottender.config.js
+  handler.js
   package.json
   README.md
   yarn.lock
+  .env
 ```
 
-### index.js
+檔案大致的職責分配：
 
-All functionalities start from here.\
-Mainly it's a server which listen on port 5000. You are encouraged to add more [event listener](https://bottender.js.org/docs/APIReference-Event)
-and [`Handler`](https://bottender.js.org/docs/APIReference-Handler) to enrich the bot.
+* `index.js` - 程式進入點、Bot 初始化相關、Server 相關的程式碼。
+* `handler.js` - 用 Builder 建立的主邏輯。
+* `actions/*.js` - 在 `handler.js` 裡面引入的各單一動作。
+* `bottender.config.js` - 所有 Bottender 相關的設定放置位置。
+* `.env` - 放置環境變數，包括 `ACCESS_TOKEN` 以及 `CHANNEL_SECRET`。
 
-See more examples, please refer to
-[Bottender examples](https://github.com/Yoctol/bottender/tree/master/examples).
+## Setup
 
-### bottender.config.js
+```
+yarn
+cp .env.sample .env
+```
 
-The config file for the bot.\
-We suggests you to put all platform configs into this file and use it as a parameter
-of createServer.
+然後必須在 `.env` 中編輯 `ACCESS_TOKEN` 以及 `CHANNEL_SECRET`。或是不使用 `.env` 而在執行 server 的時候直接設定環境變數。
 
-## Available Scripts
+## NPM Scripts
 
-There are two default scripts you can run:
+有兩個預先寫好的指令：
 
 ### `npm run dev`
 
-Run the bot in the development mode.\
-It will automatically restart the bot if there are any changes in `index.js`.\
-For more information, check [nodemon's repo](https://github.com/remy/nodemon)
+用 [nodemon](https://github.com/remy/nodemon) 執行 Bot，會監控修改進行重啟，適合開發使用。
 
 ### `npm start`
 
-Run the bot without being monitored.\
-The bot won't be restarted when you change anything in `index.js`
+執行 Bot。
+
+## License
+
+MIT © [吳東曄 Wu, Dung-Ie](https://github.com/tw0517tw/bottender-order-example)

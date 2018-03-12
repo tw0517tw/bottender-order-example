@@ -9,6 +9,7 @@ const bot = new LineBot({
   channelSecret: config.channelSecret,
 });
 
+// 初始的 state
 bot.setInitialState({
   開團中: false,
   開團人: '',
