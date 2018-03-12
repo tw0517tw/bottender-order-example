@@ -14,7 +14,7 @@ const 開團中handler = new LineHandler()
   .onText('截止', 截止)
   .onText('統計', 統計)
   .onText('取消', 取消訂單)
-  .onText(下訂單)
+  .onText(/^我也?要(.*)/, 下訂單)
   .build();
 
 // 按照 state 決定要現在的狀態要用哪個子 handler

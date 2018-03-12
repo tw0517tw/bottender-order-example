@@ -13,7 +13,7 @@ module.exports = async context => {
         };
       }
       return { ...prev, [order]: [name] };
-    });
+    }, {});
 
   const orderNames = Object.keys(sortedOrders);
   const result = orderNames
