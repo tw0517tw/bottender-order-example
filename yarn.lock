@@ -704,9 +704,9 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
-bottender@0.14.24:
-  version "0.14.24"
-  resolved "https://registry.yarnpkg.com/bottender/-/bottender-0.14.24.tgz#ad532f94f10288e332ffeab7e9cbe40376b574d4"
+bottender@0.14.25:
+  version "0.14.25"
+  resolved "https://registry.yarnpkg.com/bottender/-/bottender-0.14.25.tgz#b315a2ced411d0c48ad0b1f8b5340faee0882678"
   dependencies:
     "@slack/client" "^4.0.0"
     axios "^0.18.0"
