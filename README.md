@@ -59,7 +59,7 @@
 整個目錄結構大概是這樣：
 
 ```
-bottender-kamigo-example/
+bottender-order-example/
   actions/
   node_modules/
   index.js
