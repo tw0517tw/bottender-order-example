@@ -2,7 +2,7 @@
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/tw0517tw/bottender-order-example&env=ACCESS_TOKEN&env=CHANNEL_SECRET)
 
-以 [Bottender](https://github.com/Yoctol/bottender) 實作的團購揪團 LINE Bot 範例，[還沒寫好的](https://blog.yoctol.com)文章的範例程式碼。
+以 [Bottender](https://github.com/Yoctol/bottender) 實作的團購揪團 LINE Bot 範例，[輕鬆揪團不求人！在 LINE 上打造屬於你的 Chatbot 揪團小幫手](https://blog.yoctol.com/bottender-line-order-example-4a3d33dc19f8)的範例程式碼。
 
 ## 支援的指令
 
