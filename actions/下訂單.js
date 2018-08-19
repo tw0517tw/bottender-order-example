@@ -4,7 +4,7 @@ module.exports = async (context, match) => {
 
   // 檢查訂單裡面有沒有這個人點過的東西
   if (context.state.訂單.some(obj => obj.userId === userId)) {
-    await context.replyText(
+    await context.sendText(
       `${displayName} 你已經點過了，可以輸入「取消」再點一次`
     );
   } else {

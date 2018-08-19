@@ -8,5 +8,5 @@ module.exports = async context => {
     訂單: [],
   });
 
-  await context.replyText(`${displayName} 開團囉! 大家快來點!`);
+  await context.sendText(`${displayName} 開團囉! 大家快來點!`);
 };
