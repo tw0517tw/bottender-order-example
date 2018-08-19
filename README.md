@@ -88,6 +88,7 @@ cp .env.sample .env
 ```
 
 然後必須在 `.env` 中編輯 `ACCESS_TOKEN` 以及 `CHANNEL_SECRET`。或是不使用 `.env` 而在執行 server 的時候直接設定環境變數。
+如果想要使用 `ConsoleBot` 模式，在 `.env` 中把 `USE_CONSOLE` 設為 `true`。
 
 ## NPM Scripts
 
