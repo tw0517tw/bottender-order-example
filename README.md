@@ -78,7 +78,7 @@ bottender-order-example/
 * `handler.js` - 用 Builder 建立的主邏輯。
 * `actions/*.js` - 在 `handler.js` 裡面引入的各單一動作。
 * `bottender.config.js` - 所有 Bottender 相關的設定放置位置。
-* `.env` - 放置環境變數，包括 `ACCESS_TOKEN` 以及 `CHANNEL_SECRET`。
+* `.env` - 放置環境變數，包括 `ACCESS_TOKEN` 、 `CHANNEL_SECRET` 以及 `USE_CONSOLE`。
 
 ## Setup
 
